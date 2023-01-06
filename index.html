@@ -22,7 +22,7 @@
 </body>
 
 <script>
-    function Strenght(password) {
+    function Strength(password) {
         let i = 0;
         if (password.length >= 4) {
             i++;
@@ -49,12 +49,12 @@
     document.addEventListener("keyup", function (e) {
         let password = document.querySelector("#myPassword").value;
 
-        let strenght = Strenght(password);
-        if (strenght <= 2) {
+        let strength = Strength(password);
+        if (strength <= 2) {
             container.classList.add("weak");
             container.classList.remove("medium");
             container.classList.remove("strong");
-        } else if (strenght >= 2 && strenght <= 4) {
+        } else if (strength >= 2 && strength <= 4) {
             container.classList.remove("weak");
             container.classList.add("medium");
             container.classList.remove("strong");
